@@ -1,0 +1,102 @@
+body {
+    
+    font-family: 'Athiti' , monospace;
+    background-color: #f3f3f3;
+}
+
+#wrapper {
+    
+    max-width: 1260px;
+    margin: auto;
+    background-color: #ffffff;
+    padding: 20px;
+    max-height: 1600px;
+}
+
+#top-section {
+    
+    background-color: 0a0d49;
+    height: 100px;
+    padding: 7px;
+}
+
+#logo {
+    
+    height: 100px;
+    width: 100px;
+    float: left;
+}
+
+header h1 {
+    
+    
+    text-transform: uppercase;
+    color: f2de30;
+    margin-left: -30px;
+    
+}
+
+.menu {
+    
+    padding: 10px 0 10px 0;
+    text-align: left;
+    line-height: 20px;
+    background-color: f2de30;
+}
+ul.menu {
+    
+    margin-top: 0px;
+    
+}
+.menu li {
+    
+    display: inline;
+    padding: 0 10px 0 10px;
+    font-size: 18px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: 0a0d49;
+    padding: 6px;
+    font-variant: small-caps;
+}
+
+.menu a:hover {
+    color: f2de30 ;
+    background-color: 0a0d49;
+}
+
+#search {
+    width: 200px;
+    padding: 4px;
+    border: 1px solid #000000;
+    
+    
+}
+#submit {
+    padding: 4px;
+    margin-left: inheritz;
+    border: 1px solid #000000;
+    
+}
+
+#title_1 {
+    
+    margin: 5px;
+    padding: -5px;
+}
+
+#subtitle_1 {
+    margin: 5px;
+    padding: -10px;
+    font-size: 110%;
+    color: whitesmoke;
+}
+
+#web-title {
+    
+    background-color: black;
+    margin-top: -16px;
+    
+}
