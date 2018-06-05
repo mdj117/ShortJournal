@@ -76,7 +76,7 @@ ul.menu {
 }
 #submit {
     padding: 4px;
-    margin-left: inheritz;
+    margin-left: inherit;
     border: 1px solid #000000;
     
 }
@@ -99,4 +99,15 @@ ul.menu {
     background-color: black;
     margin-top: -16px;
     
+}
+
+#my-file {
+
+border-style: solid;
+border-radius: 9px;
+border-width: 0.5px;
+padding: 3px;
+margin-left: 500px;
+margin-top: 30px;
+
 }
