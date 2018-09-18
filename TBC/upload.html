@@ -21,11 +21,11 @@
         <nav>
             <ul class="menu">
             
-                <li> <a href="homepage.html">home</a></li>
-                <li> <a href="#">discover</a></li>
-                <li> <a href="#">upload</a></li>
-                <li> <a href="#">about</a></li>
-                
+              <li> <a href="homepage.html">home</a></li>
+                <li> <a href="discover.html">discover</a></li>
+                <li> <a href="upload.html">upload</a></li>
+                <li> <a href="about.html">about</a></li>
+                <li> <a href="login.html">login</a></li>
             
                 
             </ul>
@@ -38,19 +38,82 @@
         </header>
         
   
-        <input type="button" id="my-button" value="Upload">
-        <input type="file" name="my_file" id="my-file">
+          <div id="upload_section">
+        
+        
+        <progress value="0" max="100" id="uploader">0%</progress>
+              
+        <input type="file" value="upload" id="uploadbutton">
+        
+        
+        </div>
         
         
     </div>
-   <script> 
-    $('#my-button').click(function(){
-    $('#my-file').click();
-});
-       </script>
     
     
-</body>
+
+<script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCbwqBeu3PSbQhaQFmc_D0AmJF_I1EoNfs",
+    authDomain: "shortjournal-957f7.firebaseapp.com",
+    databaseURL: "https://shortjournal-957f7.firebaseio.com",
+    projectId: "shortjournal-957f7",
+    storageBucket: "shortjournal-957f7.appspot.com",
+    messagingSenderId: "547786231089"
+  };
+  firebase.initializeApp(config);
+</script>
+    
+    <script>
+        var uploader = document.getElementById('uploader')
+        var uploadbutton = document.getElementById('uploadbutton');
+        
+        uploadbutton.addEventListener('change',function(e){
+            
+            
+            var file = e.target.files[0];
+        
+           var storageRef = firebase.storage().ref('Files/' + file.name);
+            console.log(storageRef);
+            
+            var task = storageRef.put(file);
+            
+            task.on('state_changed',
+                   
+                   function progress(snapshot) {
+                    var percentage = (snapshot.bytesTransferred /
+                        snapshot.totalBytes) * 100;
+                
+                    uploader.value = percentage; 
+                
+            },
+                    function error(err) {
+                
+                
+            },
+                    
+                    function complete() {
+                
+                window.alert("Done");
+                
+                
+            }
+                   
+                   )
+            
+            
+            
+        });
+    
+    
+    
+    
+    </script>
+    
+</body> 
 
 
 </html>
