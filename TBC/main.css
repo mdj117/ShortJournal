@@ -155,3 +155,8 @@ buttons fade in as a visual cue for the user */
     width: 50%;
     margin-bottom: 10px;
 }
+
+ #upload_drop {
+             
+             float:left;
+         }

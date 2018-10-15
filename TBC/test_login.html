@@ -4,92 +4,14 @@
      <meta nhttp-equiv="x-ua-compatible" content="ie=edge,chrome=1">
     
     <link rel="stylesheet" href="main.css">
-    
-     <link href="bootstrap3/css/bootstrap.css" rel="stylesheet" />
+    s
  
 	<link href="login-register.css" rel="stylesheet" />
 	
 	<script src="jquery/jquery-1.10.2.js" type="text/javascript"></script>
 	<script src="bootstrap3/js/bootstrap.js" type="text/javascript"></script>
 	<script src="login-register.js" type="text/javascript"></script>
-    
-    
-     <style type="text/css">
-         
-         #logo {
-             
-             
-             height: 100%;
-             
-         }
-        
-            #text_message {
-                
-               
-                margin-top: 20px;
-                font-size: 150%;
-                font-family: 'Oswald',sans-serif;
-            
-            }
-            
-            .main-div, .loggedin-div {
-                
-                margin: 0px auto;
-                margin-top: 100px;
-                padding: 20px;
-                width: 25%;
-                
-            }
-        
-            
-            .main-div input {
-                
-                display: block;
-                border: solid 1px #ccc;
-                border-radius: 5px;
-                background: #fff;
-                padding: 15px;
-                outline: none;
-                width: 100%;
-                margin-bottom: 15px;
-            }
-            
-               .main-div input:focus{
-                
-                border: solid 1px #666;
-            }
-              
-            .main-div button , .loggedin-div button {
-                
-                background: #5d8ffc;
-                color: #fff;
-                border: 0px;
-                border-radius: 5px;
-                padding: 10px;
-                display: block;
-                width: 100%; 
-                transition: 0.25s;
-                -webkit-transition: 0.25s;
-                -moz-transition: 0.25s;
-                
-            }
-            
-            .main-div button:hover, .loggedin-div button:hover {
-                background: #fff;
-                color: #5d8ffc;
-                border: solid 1px #5d8ffc;
-                
-                
-            }
-         
-         #container_box_logout {
-
-             margin-top: 10px;
-         }
-         
-        
-            
-        </style>
+    <link href='https://fonts.googleapis.com/css?family=Athiti' rel='stylesheet'>
 </head>
 
 <body>
@@ -122,6 +44,7 @@
            <h2 id="subtitle_1">An open source research paper repository</h2>
            
         </header>
+    
     
     
          
@@ -243,8 +166,6 @@
         
         
     </div>
-        
-    </div>
 <script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
 <script>
   // Initialize Firebase
@@ -338,7 +259,7 @@ firebase.auth().onAuthStateChanged(function(user) {
                      document.getElementById("user_div").style.display = "none";
                       document.getElementById("container_box").style.display = "block";
                       document.getElementById("container_box_logout").style.display = "none";
-                       document.getElementById("upload_drop").style.display = "none";
+                       document.getElementById("upload_drop").style.display = "block";
                    }
                 });
 
@@ -347,5 +268,8 @@ firebase.auth().onAuthStateChanged(function(user) {
     
     </script>
     
+        </div>
+         
+      
 </body>
 </html>

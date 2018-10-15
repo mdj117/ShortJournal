@@ -23,7 +23,7 @@
             
                 <li> <a href="homepage.html">home</a></li>
                 <li> <a href="discover.html">discover</a></li>
-                <li> <a href="upload.html">upload</a></li>
+                <div id="upload_drop"><li> <a href="upload.html">upload</a></li></div>
                 <li> <a href="about.html">about</a></li>
                 <li> <a href="login.html">login</a></li>
                 
@@ -47,6 +47,39 @@
     
         </div>
          
-      
+      <script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCbwqBeu3PSbQhaQFmc_D0AmJF_I1EoNfs",
+    authDomain: "shortjournal-957f7.firebaseapp.com",
+    databaseURL: "https://shortjournal-957f7.firebaseio.com",
+    projectId: "shortjournal-957f7",
+    storageBucket: "shortjournal-957f7.appspot.com",
+    messagingSenderId: "547786231089"
+  };
+  firebase.initializeApp(config);
+</script>  
+    
+        <script>
+    
+    
+firebase.auth().onAuthStateChanged(function(user) {
+                  if (user) {
+                      
+                      document.getElementById("upload_drop").style.display = "block";
+                  }
+                   else {   
+                     
+                       document.getElementById("upload_drop").style.display = "none";
+                   }
+                });
+
+    
+    
+    
+    </script>
+    
+    
 </body>
 </html>
