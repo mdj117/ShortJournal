@@ -160,3 +160,13 @@ buttons fade in as a visual cue for the user */
              
              float:left;
          }
+
+.page_no {
+    
+      text-align: left;
+}
+
+#text_upload_area {
+    
+    margin: 20px;
+}

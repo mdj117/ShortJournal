@@ -38,6 +38,44 @@
            
         </header>
     
+        
+    <form>
+                <input type="text" placeholder="Search..." id="search">
+                <input type="submit" value="Search" id="submit">
+            </form>
+    
+      
+    
+    
+    <div> <hr>
+    
+    
+    <a href="first_post.html">Determing the affect of Temperature  of a substace on the concentration of its solution.</a>
+    
+        <div class="sub-section_text">This paper was uploaded by mdj117 on 13 Nov 2018.</div>
+        
+    </div> <hr>
+    
+    
+    <div id="page_number">
+    
+    
+        <ul class="page_no">
+        
+            Page no:
+            
+            <a href="discover.html">1</a>
+            <a href="#" onclick="page_click()">2</a>
+            <a href="#" onclick="page_click()">3</a>
+            <a href="#" onclick="page_click()">...</a>
+            
+        </ul>
+        
+    
+    </div>
+       
+        
+        
     </div>
     
     <script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
@@ -56,6 +94,12 @@
     
     <script>
     
+        
+        function page_click(){
+            
+            window.alert("More content will be uploaded as more papers are submitted. As the number of approved papers cross 10, more pages will be added for convenience.");
+            
+        }
     
 firebase.auth().onAuthStateChanged(function(user) {
                   if (user) {

@@ -245,7 +245,8 @@
     </div>
         
     </div>
-<script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
 <script>
   // Initialize Firebase
   var config = {
@@ -257,19 +258,21 @@
     messagingSenderId: "547786231089"
   };
   firebase.initializeApp(config);
-</script>  
+</script>
     
     <script>
         
         function login() {
+    
+            var userEmail = document.getElementById("email_reg").value;
+            var userPass = document.getElementById("password_reg").value;
             
+            var userName = document.getElementById("name_reg").value;
+            var userNumber = document.getElementById("number_reg").value;
             
-            window.alert("Logged in");
     
-            var userEmail = document.getElementById("email").value;
-            var userPass = document.getElementById("password").value;
-    
-    
+           
+            
     firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function(error) {
                   
                   var errorCode = error.code;
@@ -284,8 +287,12 @@
             
         }
     
-    function register() {
+        
+    
+    function register( userName, userEmail, userNumber) {
+        
         console.log("hi");
+        
         var password_regis = document.getElementById("password_reg").value;
         var password_conf_regis = document.getElementById("password_confirmation").value;
         var email_regis = document.getElementById("email_reg").value;
@@ -307,6 +314,12 @@
             window.alert("Passwords don't match. Try again.")
             
         }
+        
+        firebase.database().ref('Users/' + userName).set({
+                        username: userName,
+                        email: userEmail,
+                        number: userNumber
+                    });
         
     }
         
